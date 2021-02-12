@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Book</title>
+</head>
+<body>
+    <table>
+
+        <th:block th:each="book : ${books}">
+            <tr>
+                <td th:text="'Address book: ' + ${book.getId()}"></td>
+            </tr>
+            <div th:switch="${book.getBuddies().size() == 0}">
+                <td th:case="${true}">No buddies :(</td>
+                <th:block th:each="buddy : ${book.getBuddies()}">
+                    <tr>
+                        <td th:text="${buddy.getName()}"></td>
+                        <td th:text="${buddy.getPhoneNumber()}"></td>
+                    </tr>
+                </th:block>
+            </div>
+        </th:block>
+    </table>
+</body>
+</html>
