@@ -30,7 +30,7 @@ public class MockAddressBookControllerTest {
 
         // testing data for address book template
         AddressBook addressBook = new AddressBook();
-        BuddyInfo buddy1 = new BuddyInfo("buddy1", "1234567890");
+        BuddyInfo buddy1 = new BuddyInfo("buddy1", "address1", "1234567890");
         addressBook.addBuddy(buddy1);
         ArrayList<AddressBook> addressBooksList = new ArrayList<>();
         addressBooksList.add(addressBook);

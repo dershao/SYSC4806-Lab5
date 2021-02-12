@@ -17,6 +17,7 @@ public class BuddyInfo {
     private long id;
     private String name;
     private String phoneNumber;
+    private String address;
 
     @ManyToOne
     @JoinColumn(name="addressBook_id")
@@ -27,9 +28,10 @@ public class BuddyInfo {
 
     }
 
-    public BuddyInfo(String name, String phoneNumber) {
+    public BuddyInfo(String name, String address, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
+        this.address = address;
     }
 
     public String getName() {
@@ -64,11 +66,19 @@ public class BuddyInfo {
         this.addressBook = addressBook;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
 
         return String.format(
-                "com.derekshao.AddressBookApplication.BuddyInfo[Name='%s', Phone Number='%s']",
-                name, phoneNumber);
+                "com.derekshao.AddressBookApplication.BuddyInfo[Name='%s', Address='%s', Phone Number='%s']",
+                name, address, phoneNumber);
     }
 }
