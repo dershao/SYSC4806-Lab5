@@ -5,14 +5,14 @@
     <title>Address Book</title>
 </head>
 <body>
+    <h1>Address Book</h1>
     <table>
-
         <th:block th:each="book : ${books}">
             <tr>
                 <td th:text="'Address book: ' + ${book.getId()}"></td>
             </tr>
             <div th:switch="${book.getBuddies().size() == 0}">
-                <td th:case="${true}">No buddies :(</td>
+                <td th:case="${true}">No buddies</td>
                 <th:block th:each="buddy : ${book.getBuddies()}">
                     <tr>
                         <td th:text="${buddy.getName()}"></td>

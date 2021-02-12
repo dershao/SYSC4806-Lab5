@@ -11,9 +11,6 @@ public class AddressBookController {
     @Autowired
     private AddressBookRepository addressBookRepo;
 
-    @Autowired
-    private BuddyInfoRepository buddyInfoRepo;
-
     @GetMapping("/")
     public String addressBook(Model model) {
 
@@ -23,10 +20,4 @@ public class AddressBookController {
 
         return "addressbook";
     }
-
-//    @GetMapping("/addressbook/buddies")
-//    public String buddies(Model model) {
-//
-//        buddyInfoRepo.findAll().forEach();
-//    }
 }
