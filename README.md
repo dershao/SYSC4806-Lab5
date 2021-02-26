@@ -5,3 +5,11 @@
 Travis CI [Link](https://travis-ci.com/github/dershao/SYSC4806-Lab5)
 
 Heroku Deployment [Link](https://addressbook-webapp.herokuapp.com/)
+
+### Client side Link
+
+[Link](https://addressbook-webapp.herokuapp.com/home)
+
+### SPA Link
+
+[Link](https://addressbook-webapp.herokuapp.com/homespa)

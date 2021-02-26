@@ -136,9 +136,6 @@ const Home = {
 
             $("table").append(bookRow);
 
-            console.log(addressBook);
-            console.log(Object.keys(addressBook));
-
 
             if (addressBook.buddies.length > 0) {
 
