@@ -39,7 +39,7 @@ public class MockAddressBookControllerTest {
         when(addressBookRepository.findAll()).thenReturn(addressBooksList);
 
         // check if the address book with buddy is present
-        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/home")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("buddy1")));
     }
 }
