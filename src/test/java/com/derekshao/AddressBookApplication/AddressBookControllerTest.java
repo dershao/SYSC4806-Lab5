@@ -17,6 +17,8 @@ public class AddressBookControllerTest {
     @Autowired
     private AddressBookController addressBookController;
 
+    private BuddyInfo buddyInfo = new BuddyInfo();
+
     @Autowired
     private TestRestTemplate restTemplate;
 

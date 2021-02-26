@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddressBook Form</title>
+</head>
+<body>
+    <h1>Address Book Form</h1>
+    <form action="#" th:action="@{/addressbook/form}" th:object="${addressBook}" method="post">
+        <p>Name: <input type="text" name="name" th:field="*{name}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

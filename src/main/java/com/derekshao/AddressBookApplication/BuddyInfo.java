@@ -1,5 +1,6 @@
 package com.derekshao.AddressBookApplication;
 
+import com.fasterxml.jackson.annotation.*;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class BuddyInfo {
     @ManyToOne
     @JoinColumn(name="addressBook_id")
     @RestResource(path = "addressBook", rel="addressBook")
+    @JsonIgnore
     private AddressBook addressBook;
 
     public BuddyInfo() {

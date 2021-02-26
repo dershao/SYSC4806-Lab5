@@ -1,5 +1,6 @@
 package com.derekshao.AddressBookApplication;
 
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,6 +17,7 @@ public class AddressBook {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
+    private String name;
     @OneToMany(mappedBy = "addressBook", cascade = CascadeType.ALL)
     private List<BuddyInfo> buddies;
 
@@ -41,7 +43,6 @@ public class AddressBook {
         final Iterator buddyIterator = buddies.iterator();
 
         while (buddyIterator.hasNext()) {
-
 
             BuddyInfo buddy = (BuddyInfo) buddyIterator.next();
 
@@ -81,5 +82,13 @@ public class AddressBook {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

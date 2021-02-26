@@ -9,18 +9,20 @@
     <table>
         <th:block th:each="book : ${books}">
             <tr>
-                <td th:text="'Address book: ' + ${book.getId()}"></td>
+                <td th:text="'Address book ID: ' + ${book.getId() + ' Name: ' + book.getName()}"></td>
             </tr>
             <div th:switch="${book.getBuddies().size() == 0}">
                 <td th:case="${true}">No buddies</td>
                 <th:block th:each="buddy : ${book.getBuddies()}">
                     <tr>
                         <td th:text="${buddy.getName()}"></td>
+                        <td th:text="${buddy.getAddress()}"></td>
                         <td th:text="${buddy.getPhoneNumber()}"></td>
                     </tr>
                 </th:block>
             </div>
         </th:block>
     </table>
+    <p> <a id="createAddressBook" href="/addressbook/form">Create new AddressBook</a> <a id="createBuddyInfo" href="/buddyinfo/form">Create new BuddyInfo</a></p>
 </body>
 </html>
